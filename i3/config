@@ -438,7 +438,6 @@ bindsym Mod1+p exec thunderbird
 #bindsym Mod1+v exec viber
 bindsym Mod1+o exec libreoffice
 bindsym Mod1+Ctrl+Delete exec lxtask
-bindsym Mod1+d exec xfce4-terminal -e 'mocp -T et'
 
 # Power Profiles menu switcher (rofi)
 
