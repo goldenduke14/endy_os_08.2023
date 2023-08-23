@@ -483,10 +483,9 @@ assign [class="Xfce4-terminal"] $ws5
 assign [class="(?i)firefox"] $ws1
 assign [class="Google-chrome"] $ws1
 assign [class="Thunar"] $ws3
-assign [class="thunderbird"] $2
+assign [class="thunderbird"] $ws2
 assign [class="TelegramDesktop"] $ws2
 assign [class="Slack"] $ws2
-assign [class="TelegramDesktop"] $ws2
 assign [class="Viber"] $ws2
 assign [class="Deluge"] $ws3
 assign [class="libreoffice-startcenter"] $ws4
@@ -605,10 +604,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-
-#exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
 #exec --no-startup-id setxkbmap -layout "us,ru" -variant ,"ruu" -option "grp:caps_toggle,grp_led:caps"
-#exec --no-startup-id setxkbmap -layout "us,uk" -option "grp:ctrl_shift_toggle"
 exec --no-startup-id setxkbmap -layout "us,ru" -variant ,"ruu" -option "grp:ctrl_shift_toggle"
 
 # set wallpaper
@@ -664,7 +660,7 @@ exec --no-startup-id /usr/bin/dunst
 exec_always --no-startup-id autotiling
 
 # glava visualizer
-exec --no-startup-id glava --desktop --force-mod=circle
+exec --no-startup-id sleep 8 && ~/.config/glava/glava_start
 
 # Autostart apps as you like
 
@@ -674,6 +670,8 @@ exec --no-startup-id sleep 7 && google-chrome-stable
 exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id clipit
 exec --no-startup-id xset -b
+exec --no-startup-id telegram-desktop
+exec --no-startup-id code
 
 ###############
 
