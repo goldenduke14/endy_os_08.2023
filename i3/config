@@ -438,6 +438,7 @@ bindsym Mod1+p exec thunderbird
 #bindsym Mod1+v exec viber
 bindsym Mod1+o exec libreoffice
 bindsym Mod1+Ctrl+Delete exec lxtask
+bindsym Mod1+d exec xfce4-terminal -e 'mocp -T deephouse'
 
 # Power Profiles menu switcher (rofi)
 
@@ -662,7 +663,7 @@ exec --no-startup-id /usr/bin/dunst
 
 exec_always --no-startup-id autotiling
 
-# glava visualizerы
+# glava visualizer
 exec --no-startup-id glava --desktop --force-mod=circle
 
 # Autostart apps as you like
