@@ -626,7 +626,7 @@ exec --no-startup-id xset s 600 dpms 1200 1200 1200
 # https://wiki.archlinux.org/title/Session_lock#xautolock
 
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
-exec --no-startup-id xautolock -time 5 -locker "~/.config/i3/scripts/blur-lock"
+exec --no-startup-id xautolock -time 10 -locker "~/.config/i3/scripts/blur-lock"
 
 # xscreensaver
 
@@ -657,7 +657,7 @@ exec --no-startup-id /usr/bin/dunst
 
 # `yay -S autotiling ;) (it is in AUR)
 
-exec_always --no-startup-id autotiling
+# exec_always --no-startup-id autotiling
 
 # glava visualizer
 exec --no-startup-id sleep 8 && ~/.config/glava/glava_start
@@ -666,12 +666,13 @@ exec --no-startup-id sleep 8 && ~/.config/glava/glava_start
 
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+exec --no-startup-id sleep 6 && firefox
 exec --no-startup-id sleep 7 && google-chrome-stable
 exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id clipit
 exec --no-startup-id xset -b
 exec --no-startup-id telegram-desktop
-exec --no-startup-id code
+# exec --no-startup-id code
 
 ###############
 
@@ -731,10 +732,12 @@ for_window [class=".*"] border pixel 1
 
 #for_window [class=".*"] move position center
 
-# Open specific applications in tabbed
+# Open specific apps in tabbed
 
 #for_window [class="Pcmanfm"] layout tabbed
 #for_window [class="Thunar"] layout tabbed
+for_window [class="Google-chrome"] layout tabbed
+for_window [class="(?i)firefox"] layout tabbed
 for_window [class="libreoffice"] layout tabbed
 for_window [class="thunderbird"] layout tabbed
 
